@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pacifico';
+  src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: #14101d;
+  color: #f4eefc;
+  font: 15px/1.45 system-ui, -apple-system, sans-serif;
+}
+.shell { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 26px; }
+.panel {
+  width: 300px; flex: 0 0 300px; display: flex; flex-direction: column; gap: 13px;
+  background: #1e1830; border: 1px solid #372c55; border-radius: 12px; padding: 20px;
+}
+.brand { font-family: 'Anton', sans-serif; font-size: 30px; letter-spacing: 1px; margin: 0; color: #ff5da2; }
+.tag { margin: 0; color: #b9aed6; font-size: 13.5px; }
+.subhead { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #7de8d3; margin: 6px 0 0; }
+.field { display: flex; flex-direction: column; gap: 5px; font-weight: 600; font-size: 13px; }
+.field input, .field select {
+  font: inherit; font-weight: 500; padding: 8px 9px; border-radius: 7px;
+  border: 1px solid #4a3d75; background: #120d20; color: #f4eefc;
+}
+.row { display: flex; gap: 10px; }
+.row .grow { flex: 1; }
+.panels { display: flex; flex-direction: column; gap: 10px; }
+.panelctl { border: 1px solid #372c55; border-radius: 9px; padding: 9px; display: flex; flex-direction: column; gap: 7px; }
+.panelctl legend, .panelctl .plabel { font-size: 12px; font-weight: 700; color: #ffb3cd; }
+.panelctl .row select { flex: 1; min-width: 0; }
+button {
+  font: inherit; font-weight: 700; padding: 10px 12px; border: 0; border-radius: 8px;
+  background: #ff5da2; color: #1c0a18; cursor: pointer; flex: 1;
+}
+button.ghost { background: transparent; color: #7de8d3; border: 1px solid #2f7f74; }
+button:hover { filter: brightness(1.1); }
+#status { margin: 0; min-height: 1.2em; color: #b9aed6; font-size: 13px; }
+.stage { display: flex; align-items: flex-start; justify-content: center; }
+canvas#cover {
+  height: min(92vh, 1080px); width: auto; max-width: 62vw;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55); background: #000;
+}
+
+/* Screenshot mode: cover only, edge to edge. */
+body.shot-cover .shell { padding: 0; gap: 0; }
+body.shot-cover .panel { display: none; }
+body.shot-cover .stage { width: 100vw; height: 100vh; }
+body.shot-cover canvas#cover { width: 100vw; height: 100vh; max-width: none; box-shadow: none; }

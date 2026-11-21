@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Panel Studio</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="shell">
+  <aside class="panel">
+    <h1 class="brand">Vice Panel Studio</h1>
+    <p class="tag">Slanted comic panels, loud grades, one loud cover. Build a
+    video-game cover, then export it as a PNG.</p>
+
+    <label class="field">Title
+      <input id="title" type="text" maxlength="24" value="NEON TIDE">
+    </label>
+    <label class="field">Subtitle
+      <input id="subtitle" type="text" maxlength="40" value="Vice Dreams">
+    </label>
+    <div class="row">
+      <label class="field grow">Layout
+        <select id="layout">
+          <option value="trio">Slash Trio</option>
+          <option value="quad">Quad Grid</option>
+          <option value="hero">Hero + Strip</option>
+        </select>
+      </label>
+      <label class="field">Rating
+        <select id="rating">
+          <option value="RP">RP</option>
+          <option value="M" selected>M</option>
+          <option value="18">18</option>
+          <option value="AO">AO</option>
+        </select>
+      </label>
+    </div>
+
+    <h2 class="subhead">Panels</h2>
+    <div id="panelControls" class="panels"></div>
+
+    <div class="row">
+      <button id="shuffle" type="button" class="ghost">Shuffle art</button>
+      <button id="export" type="button">Export PNG</button>
+    </div>
+    <p id="status" role="status"></p>
+  </aside>
+  <section class="stage">
+    <canvas id="cover" width="1080" height="1350" aria-label="Your cover art"></canvas>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
