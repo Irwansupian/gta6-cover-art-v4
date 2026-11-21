@@ -1,0 +1,6 @@
+[
+  { "name": "1-cover.jpg", "query": "?shot=cover", "w": 1280, "h": 1600 },
+  { "name": "2-editor.jpg", "query": "", "w": 1280, "h": 860 },
+  { "name": "3-cover.jpg", "query": "?shot=cover&layout=quad&title=Scarlet%20Harbor&sub=Midnight%20Run&rating=RP", "w": 1280, "h": 1600 },
+  { "name": "4-cover.jpg", "query": "?shot=cover&layout=hero&title=Golden%20Mile&sub=Palm%20Shadows&rating=18", "w": 1280, "h": 1600 }
+]
